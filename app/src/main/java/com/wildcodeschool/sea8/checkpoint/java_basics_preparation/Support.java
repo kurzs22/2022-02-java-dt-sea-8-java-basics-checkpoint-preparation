@@ -11,13 +11,15 @@ public class Support extends ITPerson {
 
     @Override
     public boolean hasReadAccess() {
-        // Add logic to evaluate Read access for Support here.
-        return false;
+        //  level 0 is no access, level 1 is Read access, level 2 is Write access.
+        if (level > 0) return true;
+        else return false;
     }
 
     @Override
     public boolean hasWriteAccess() {
-        // Add logic to evaluate Write access for Admin here.
-        return false;
+        //  level 0 is no access, level 1 is Read access, level 2 is Write access.
+        if (level > 1) return true;
+        else return false;
     }
 }
